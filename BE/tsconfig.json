@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "lib": ["es6", "dom", "esnext", "esnext.asynciterable"],
+      "typeRoots": ["./src/types", "./node_modules/@types"],
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "moduleResolution": "node",
+      "module": "commonjs",
+      "sourceMap": true,
+      "outDir": "dist",
+      "allowJs": true,
+      "baseUrl": "./src",
+      "esModuleInterop": true,
+      "paths": {
+        "#router": ["app/router"],
+        "#router/*": ["app/router/*"],
+        "#helpers/*": ["helpers/*"],
+        "#config": ["config"],
+        "#database": ["database"],
+      }
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["node_modules", "tests", "commands"],
+  
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+  }
